@@ -32,11 +32,12 @@ var root = new Vue({
 
                 //Se l'indice raggiunge la lunghezza dell'array..
                 if (nextPrevImg >= this.imgLinks.length) {
+
                     //Resetto l'indice a zero
                     nextPrevImg = 0;
                 }
 
-                //Nel caso in cui l'argomento della funzione è false..
+            //Nel caso in cui l'argomento della funzione è false..
             } else {
                 //L'indice diminuisce
                 nextPrevImg -= 1;
