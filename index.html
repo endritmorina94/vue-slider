@@ -12,25 +12,23 @@
 
 <body>
 
-    <div class="container">
+    <div  class="container">
 
-        <div class="slider">
+        <div id="root" class="slider">
 
 
 
             <div class="images">
-                <img id="prima" class="first displayed" src="img/campagna.jpg" alt="Campagna">
-                <img src="img/cascate.jpg" alt="Cascate">
-                <img src="img/fiori.jpeg" alt="Fiori">
-                <img class="last" src="img/montagne.jpg" alt="Montagne">
+                <img :src="imgLinks[currentImg]" alt="">
             </div>
 
             <div class="slider-direction">
-                <div class="arrow left">
+
+                <div @click="imgDirection = '+'; nextPrev()" class="arrow left">
                     <i class="fas fa-chevron-circle-left"></i>
                 </div>
 
-                <div class="arrow right">
+                <div @click="imgDirection = '-'; nextPrev()" class="arrow right">
                     <i class="fas fa-chevron-circle-right"></i>
                 </div>
             </div>
@@ -38,10 +36,10 @@
         </div>
 
         <div class="slider-buttons">
-            <div class="first btn active-btn"></div>
+            <div class="btn active-btn"></div>
             <div class="btn"></div>
             <div class="btn"></div>
-            <div class="last btn"></div>
+            <div class="btn"></div>
         </div>
     </div>
 

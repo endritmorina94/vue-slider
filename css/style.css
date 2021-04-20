@@ -6,7 +6,6 @@
 
 img {
     width: 100%;
-    display: none;
 }
 
 body{
@@ -58,14 +57,6 @@ body{
 
 .images {
     position: relative;
-}
-
-.images img {
-    position: absolute;
-}
-
-.images .first {
-    display: block;
 }
 
 .slider-buttons {
