@@ -7,12 +7,16 @@
     <title>Vue Carousel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
 
     <div id="root" class="container">
+
+        <h1>Vue Slider</h1>
 
         <div class="slider">
 
@@ -26,18 +30,18 @@
             <div class="slider-direction">
 
                 <div @click="nextPrev(false)" class="arrow left">
-                    <i class="fas fa-chevron-circle-left"></i>
+                    <i class="fas fa-chevron-left"></i>
                 </div>
 
                 <div @click="nextPrev(true)" class="arrow right">
-                    <i class="fas fa-chevron-circle-right"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </div>
             </div>
 
         </div>
 
         <div class="slider-buttons">
-            <div v-for="(item, index) in imgLinks" class="btn" :class="(index == currentImg)? 'active-btn' : ''" @click="jumpToImg(index)"></div>
+            <div v-for="(item, index) in imgLinks" class="btn" :class="{ 'active-btn' : index == currentImg }" @click="jumpToImg(index)"></div>
         </div>
     </div>
 
