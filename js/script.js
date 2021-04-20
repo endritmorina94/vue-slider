@@ -13,7 +13,6 @@ var root = new Vue({
             "img/montagne.jpg"
         ],
 
-
     },
 
     methods: {
