@@ -24,7 +24,7 @@ background-image: url("https://www.transparenttextures.com/patterns/skulls.png")
 }
 
 .slider {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     position: relative;
     padding: 7px;
     margin: 0 auto;
