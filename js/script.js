@@ -25,7 +25,7 @@ var root = new Vue({
             if (forward){
                 nextPrevImg += 1;
 
-                if (this.currentImg >= this.imgLinks.length) {
+                if (nextPrevImg >= this.imgLinks.length) {
                     nextPrevImg = 0;
                 }
 
@@ -49,9 +49,11 @@ var root = new Vue({
     },
 
     created: function () {
-        setInterval(function(){
-            nextPrev(true);
-        }, 1000);
+
+        setInterval(() => {
+            this.nextPrev(true);
+        }, 3000);
+
     }
 
 });
