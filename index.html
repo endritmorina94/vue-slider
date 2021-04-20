@@ -20,8 +20,6 @@
 
         <div class="slider">
 
-
-
             <div class="images">
                 <img :src="imgLinks[currentImg]" alt="">
                 <div class="shadow"></div>
@@ -36,6 +34,7 @@
                 <div @click="nextPrev(true)" class="arrow right">
                     <i class="fas fa-chevron-right"></i>
                 </div>
+
             </div>
 
         </div>
@@ -43,9 +42,11 @@
         <div class="slider-buttons">
             <div v-for="(item, index) in imgLinks" class="btn" :class="{ 'active-btn' : index == currentImg }" @click="jumpToImg(index)"></div>
         </div>
+
     </div>
 
     <script src="js/script.js" charset="utf-8"></script>
+    
 </body>
 
 </html>
