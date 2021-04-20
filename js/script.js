@@ -23,15 +23,13 @@ var root = new Vue({
             let nextPrevImg = this.currentImg;
 
             if (forward){
-
                 nextPrevImg += 1;
 
-                if (nextPrevImg >= this.imgLinks.length) {
+                if (this.currentImg >= this.imgLinks.length) {
                     nextPrevImg = 0;
                 }
 
             } else {
-
                 nextPrevImg -= 1;
 
                 if (nextPrevImg < 0) {
@@ -45,18 +43,15 @@ var root = new Vue({
         },
 
         jumpToImg(number) {
-
             this.currentImg = number;
-
         }
 
     },
 
     created: function () {
         setInterval(function(){
-            this.currentImg + 1;
-            console.log(this.currentImg);
-        }, 3000);
+            nextPrev(true);
+        }, 1000);
     }
 
 });
