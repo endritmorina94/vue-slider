@@ -13,26 +13,50 @@ var root = new Vue({
             "img/montagne.jpg"
         ],
 
-        imgDirection: "+"
 
     },
 
     methods: {
 
-        nextPrev() {
+        nextPrev(forward) {
 
-            const nextPrevImg = eval(this.currentImg + this.imgDirection + "1");
+            let nextPrevImg = this.currentImg;
+
+            if (forward){
+
+                nextPrevImg += 1;
+
+                if (nextPrevImg >= this.imgLinks.length) {
+                    nextPrevImg = 0;
+                }
+
+            } else {
+
+                nextPrevImg -= 1;
+
+                if (nextPrevImg < 0) {
+                    nextPrevImg = this.imgLinks.length -1;
+                }
+
+            }
 
             this.currentImg = nextPrevImg;
 
-            if (nextPrevImg >= this.imgLinks.length) {
-                this.currentImg = 0;
-            } else if (nextPrevImg < 0) {
-                this.currentImg = this.imgLinks.length -1;
-            }
+        },
+
+        jumpToImg(number) {
+
+            this.currentImg = number;
 
         }
 
+    },
+
+    created: function () {
+        setInterval(function(){
+            this.currentImg + 1;
+            console.log(this.currentImg);
+        }, 3000);
     }
 
 });

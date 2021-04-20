@@ -24,11 +24,11 @@
 
             <div class="slider-direction">
 
-                <div @click="imgDirection = '-'; nextPrev()" class="arrow left">
+                <div @click="nextPrev(false)" class="arrow left">
                     <i class="fas fa-chevron-circle-left"></i>
                 </div>
 
-                <div @click="imgDirection = '+'; nextPrev()" class="arrow right">
+                <div @click="nextPrev(true)" class="arrow right">
                     <i class="fas fa-chevron-circle-right"></i>
                 </div>
             </div>
@@ -36,7 +36,7 @@
         </div>
 
         <div class="slider-buttons">
-            <div v-for="(item, index) in imgLinks" class="btn" :class="(index == currentImg)? 'active-btn' : ''" @click="currentImg = index"></div>
+            <div v-for="(item, index) in imgLinks" class="btn" :class="(index == currentImg)? 'active-btn' : ''" @click="jumpToImg(index)"></div>
         </div>
     </div>
 
